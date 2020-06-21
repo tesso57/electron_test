@@ -1,10 +1,11 @@
 {
-  "name": "electron_test",
+  "name": "nayamu_boy",
   "version": "1.0.0",
   "description": "My goal is that I can make a simple game using the electron.",
-  "main": "main.js",
+  "main": "src/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,44 @@
   },
   "homepage": "https://github.com/ShinoTakusan/electron_test#readme",
   "devDependencies": {
-    "electron": "^9.0.4"
+    "electron": "^9.0.4",
+    "electron-builder": "^22.7.0"
+  },
+  "dependencies": {
+    "nedb": "^1.8.0"
+  },
+  "build": {
+    "appId": "com.electron.yourapp",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "assets",
+      "src",
+      "package.json",
+      "package-lock.json"
+    ],
+    "mac": {
+      "icon": "assets/mac/icon_mac.icns",
+      "target": [
+        "dmg"
+      ]
+    },
+    "win": {
+      "icon": "assets/win/icon_win.ico",
+      "target": "nsis"
+    },
+    "nsis":{
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "linux": {
+      "icon": "assets/icons",
+      "target": [
+        "deb",
+        "rpm"
+      ],
+      "category": "Network"
+    }
   }
 }
