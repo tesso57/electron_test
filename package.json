@@ -1,0 +1,22 @@
+{
+  "name": "electron_test",
+  "version": "1.0.0",
+  "description": "My goal is that I can make a simple game using the electron.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShinoTakusan/electron_test.git"
+  },
+  "author": "shinotakusan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShinoTakusan/electron_test/issues"
+  },
+  "homepage": "https://github.com/ShinoTakusan/electron_test#readme",
+  "devDependencies": {
+    "electron": "^9.0.4"
+  }
+}
